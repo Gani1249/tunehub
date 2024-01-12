@@ -1,0 +1,25 @@
+body{
+	background-color:#b2ebf2;
+	font-size:20px;
+	font-family:sans-serif;
+	text-align:center;
+}
+
+.index{
+	width:300px;
+	height:230px;
+	border:2px solid black;
+	margin:10em auto;
+	background-color:#ff8a65;
+	border-radius:10px;
+}
+button{
+	background-color:blue;
+	padding:5px;
+	cursor:pointer;
+	color:white;
+	width:90%;
+	height:3em;
+	border-radius:10px;
+}
+
