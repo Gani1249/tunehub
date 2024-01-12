@@ -25,6 +25,19 @@ public class PaymentController {
 		return "makePayment";
 	}
 	
+	@GetMapping("/payment-success")
+	public String paymentSuccess(HttpSession session) {
+		String mail =  (String) session.getAttribute("email");
+		Users u = service.getUser(mail);
+		u.setPremium(true);
+		service.updateUser(u);
+		return "customerHome";
+	}
+	
+	@GetMapping("/payment-failure")
+	public String paymentFailure() {
+		return "customerHome";
+	}
 
 	@SuppressWarnings("finally")
 	@PostMapping("/createOrder")
